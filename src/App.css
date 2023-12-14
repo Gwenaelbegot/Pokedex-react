@@ -2,6 +2,12 @@ body{
   background-color: rgb(132, 130, 130);
 }
 
+.navbar, input{
+  color: #ffcb05;
+  background-color: #3160a3;
+
+}
+
 
 #root {
   max-width: 1280px;
