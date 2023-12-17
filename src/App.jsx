@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import PokemonCard from './components/PokemonCard'
 import NavBar from './components/NavBar'
@@ -7,6 +7,12 @@ import NavBar from './components/NavBar'
 function App() {
 
 const [pokemonIndex, setPokemonIndex] = useState(0)
+useEffect(
+  () => {
+    console.log("hello pokemon trainer :)")
+  },
+  []
+);
 
 
   const pokemonList = [
@@ -53,6 +59,13 @@ const [pokemonIndex, setPokemonIndex] = useState(0)
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
     },
     {
+      name: "Pikachu",
+      nDex : "025",
+      type: "Electric",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+    },
+    {
       name: "mew",
       nDex : "151",
       type: "Psy",
@@ -68,10 +81,13 @@ const [pokemonIndex, setPokemonIndex] = useState(0)
 
   const handlePokemonClick = (index) => {
     setPokemonIndex(index);
+    if (pokemonList[index].name === 'Pikachu') {
+      console.log('pika pikachu !!!');
   };
-
-
-
+  if (pokemonList[index].name === 'Machamp'){
+    console.log("Tu commence po par m'chopper par l'colback")
+  }
+};
   return (
     <>
       <div>

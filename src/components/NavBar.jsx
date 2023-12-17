@@ -2,6 +2,7 @@ import React from 'react';
 
 function NavBar({pokemonIndex,handlePokemonClick, pokemonList }) {
 
+
     return (
         <div className="navbar">
     
@@ -11,6 +12,7 @@ function NavBar({pokemonIndex,handlePokemonClick, pokemonList }) {
              type="button" 
              value={pokemonList.name}
              onClick={() => handlePokemonClick(index)}
+             
              />
             ) )}
 
